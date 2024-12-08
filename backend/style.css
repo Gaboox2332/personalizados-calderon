@@ -1,0 +1,87 @@
+/* Diseño responsive para el contenedor */
+
+.post-it {
+    font-size: 1rem;
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    margin: 10% auto;
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
+}
+
+
+/* Sombra y efecto de rotación */
+
+.post-it:before,
+.post-it:after {
+    content: " ";
+    position: absolute;
+    z-index: 100;
+}
+
+.post-it:before {
+    background: rgba(0, 0, 0, 0.3);
+    bottom: 2px;
+    left: 4px;
+    width: 90%;
+    height: 70%;
+    -webkit-box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.3);
+    -webkit-transform: skew(-8deg, -2deg) rotate(-1deg);
+    transform: skew(-8deg, -2deg) rotate(-1deg);
+}
+
+.post-it:after {
+    background: rgba(0, 0, 0, 0.1);
+    top: 0;
+    right: 1px;
+    width: 30%;
+    height: 30%;
+    -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transform: skew(-10deg, -5deg) rotate(-1deg);
+    transform: skew(-10deg, -5deg) rotate(-1deg);
+}
+
+
+/* Contenido interno */
+
+.post-it .inner {
+    padding: 20px;
+    min-height: 100px;
+    background: #fff799;
+    z-index: 1000;
+    position: relative;
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+}
+
+
+/* Media Queries para dispositivos pequeños */
+
+@media screen and (max-width: 768px) {
+    .post-it {
+        font-size: 0.9rem;
+        width: 90%;
+        margin: 20% auto;
+    }
+    a {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .post-it {
+        font-size: 0.8rem;
+        margin: 30% auto;
+    }
+    a {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
