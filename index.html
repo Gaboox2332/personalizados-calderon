@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Personalizados Calderon--Sorteo Navideño</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .bg-gallery {
+            background: url('img/gallery.gif');
+            background-size: cover;
+            /* Ajusta el tamaño del GIF al contenedor */
+            background-position: center;
+            /* Centra el GIF */
+            background-repeat: no-repeat;
+            /* Evita que el GIF se repita */
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0" id="home">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/Fondo1.png" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Personalizados Calderon</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Participa en el Sorteo Navideño</h3>
+                            </div>
+                            <button type="button" class="btn btn-play mx-auto" data-toggle="modal" data-target="#formModal">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/Fondo2.png" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Personalizados Calderon</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Participa en el Sorteo Navideño</h3>
+                            </div>
+                            <button type="button" class="btn-play mx-auto" data-toggle="modal" data-target="#formModal">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-prev-icon mt-3"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next justify-content-end" href="#header-carousel" data-slide="next">
+                <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
+                    <span class="carousel-control-next-icon mt-3"></span>
+                </div>
+            </a> -->
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Modal Start -->
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                    <div class="watermark" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                    background-image: url('img/Logo-removebg-preview.png'); 
+                    background-size: cover; 
+                    background-position: center; 
+                    opacity: 0.2; 
+                    z-index: 1;
+                    pointer-events: none;">
+                    </div>
+                    <!-- Form content -->
+                    <form id="contactForm" action="backend/procesar_formulario.php" method="POST">
+                        <h5 class="text-center mb-4">Complete el formulario</h5>
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">Teléfono WhatsApp</label>
+                            <input type="tel" class="form-control" id="whatsapp" name="whatsapp" placeholder="Ingrese su número de WhatsApp" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+    <!-- Gallery Start -->
+    <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px;">
+        <div class=" section-title position-relative text-center " style="margin-bottom: 120px; ">
+            <h6 class="text-uppercase text-primary mb-3 " style="letter-spacing: 3px; ">Productos</h6>
+            <h1 class="font-secondary display-4 text-black ">Nuestros Productos Navideños</h1>
+            <i class="far fa-heart text-danger "></i>
+        </div>
+        <div class="owl-carousel gallery-carousel ">
+            <div class="gallery-item ">
+                <img class="img-fluid w-100 " src="img/produc-1.png " alt=" ">
+                <a href="img/produc-1.png " data-lightbox="gallery ">
+                    <i class="fa fa-2x fa-plus text-white "></i>
+                </a>
+            </div>
+            <div class="gallery-item ">
+                <img class="img-fluid w-100 " src="img/produc-2.png " alt=" ">
+                <a href="img/produc-2.png " data-lightbox="gallery ">
+                    <i class="fa fa-2x fa-plus text-white "></i>
+                </a>
+            </div>
+            <div class="gallery-item ">
+                <img class="img-fluid w-100 " src="img/produc-3.jpg " alt=" ">
+                <a href="img/produc-3.jpg " data-lightbox="gallery ">
+                    <i class="fa fa-2x fa-plus text-white "></i>
+                </a>
+            </div>
+            <div class="gallery-item ">
+                <img class="img-fluid w-100 " src="img/produc-4.jpg " alt=" ">
+                <a href="img/produc-4.jpg " data-lightbox="gallery ">
+                    <i class="fa fa-2x fa-plus text-white "></i>
+                </a>
+            </div>
+            <div class="gallery-item ">
+                <img class="img-fluid w-100 " src="img/produc-5.jpg " alt=" ">
+                <a href="img/produc-5.jpg " data-lightbox="gallery ">
+                    <i class="fa fa-2x fa-plus text-white "></i>
+                </a>
+            </div>
+            <div class="gallery-item ">
+                <img class="img-fluid w-100 " src="img/produc-6.png " alt=" ">
+                <a href="img/produc-6.png " data-lightbox="gallery ">
+                    <i class="fa fa-2x fa-plus text-white "></i>
+                </a>
+            </div>
+            <div class="gallery-item ">
+                <img class="img-fluid w-100 " src="img/produc-7.png " alt=" ">
+                <a href="img/produc-7.png " data-lightbox="gallery ">
+                    <i class="fa fa-2x fa-plus text-white "></i>
+                </a>
+            </div>
+            <div class="gallery-item ">
+                <img class="img-fluid w-100 " src="img/produc-8.png " alt=" ">
+                <a href="img/produc-8.png " data-lightbox="gallery ">
+                    <i class="fa fa-2x fa-plus text-white "></i>
+                </a>
+            </div>
+            <div class="gallery-item ">
+                <img class="img-fluid w-100 " src="img/produc-9.png " alt=" ">
+                <a href="img/produc-9.png " data-lightbox="gallery ">
+                    <i class="fa fa-2x fa-plus text-white "></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 " id="contact ">
+        <div class="container text-center py-5 ">
+            <div class="section-title position-relative text-center ">
+                <h1 class="font-secondary display-3 text-white ">Gracias Por Su Preferencia</h1>
+                <i class="far fa-heart text-white "></i>
+            </div>
+            <div class="d-flex justify-content-center mb-4 ">
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2 " href="https://www.facebook.com/personalizadoscalderon/ "><i class="fab fa-facebook-f "></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square " href="https://www.instagram.com/personalizados_calderon?igsh=ZzdmY3NxZGh3MmVw "><i class="fab fa-instagram "></i></a>
+            </div>
+            <div class="d-flex justify-content-center py-2 ">
+                <p class="text-white " href="# ">calderond.hn@gmail.com</p>
+                <span class="px-3 ">|</span>
+                <p class="text-white " href="# ">+504 3207-3126</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="# " class="btn btn-lg btn-outline-primary btn-lg-square back-to-top "><i class="fa fa-angle-double-up "></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js "></script>
+    <script src="lib/easing/easing.min.js "></script>
+    <script src="lib/waypoints/waypoints.min.js "></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js "></script>
+    <script src="lib/isotope/isotope.pkgd.min.js "></script>
+    <script src="lib/lightbox/js/lightbox.min.js "></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js "></script>
+</body>
+
+</html>
